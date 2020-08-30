@@ -1,7 +1,6 @@
-# by Simon Renblad
-
 import IPHub
 import configip
+import IPAPI
 
 # CONSTANTS #
 #############
@@ -20,9 +19,9 @@ BLOCK_CONSTRAINT = configip.BLOCK_CONSTRAINT
 def get_ip_addresses():
     file1 = open(IN_FILE_NAME, 'r')
     lines = file1.readlines()
-    for line in lines:
-        line.strip()
     file1.close()
+    for i, line in enumerate(lines):
+        lines[i] = line.strip()
     return lines
 
 # helper function for writing the good and bad ips to diff lists
@@ -61,9 +60,12 @@ def run_test():
 
         # determine good or bad based on block value
         if block < BLOCK_CONSTRAINT:
-            good_list.append(add)
+            good_list.append("".join(add,"\n"))
         else:
-            bad_list.append(add)
+            bad_list.append("".join(add,"\n"))
+
+        # get country
+        print(IPAPI.Lookup(add)['country'])
 
         # increment count
         count += 1
