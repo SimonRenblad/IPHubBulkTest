@@ -60,9 +60,9 @@ def run_test():
 
         # determine good or bad based on block value
         if block < BLOCK_CONSTRAINT:
-            good_list.append("".join(add,"\n"))
+            good_list.append("".join((add,"\n")))
         else:
-            bad_list.append("".join(add,"\n"))
+            bad_list.append("".join((add,"\n")))
 
         # get country
         print(IPAPI.Lookup(add)['country'])
