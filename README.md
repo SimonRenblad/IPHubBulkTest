@@ -13,7 +13,7 @@ A python solution for bulk testing IP addresses using the IPHub API
 
 ### Getting the API Key
 
-5. Go to the IPHub.info website
+5. Go to the IPHub.info website https://iphub.info/
 6. Register an account using email and password and confirm email
 7. Click on 'Pricing', then below the plans there is a link to a free plan, click it
 8. Copy the API key displayed to the clip board
