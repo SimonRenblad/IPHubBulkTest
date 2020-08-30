@@ -1,3 +1,5 @@
+# by Simon Renblad
+
 import IPHub
 import configip
 
