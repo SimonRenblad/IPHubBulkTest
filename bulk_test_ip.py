@@ -1,6 +1,5 @@
 import IPHub
 import configip
-import IPAPI
 
 # CONSTANTS #
 #############
@@ -63,9 +62,6 @@ def run_test():
             good_list.append("".join((add,"\n")))
         else:
             bad_list.append("".join((add,"\n")))
-
-        # get country
-        print(IPAPI.Lookup(add)['country'])
 
         # increment count
         count += 1
